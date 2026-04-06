@@ -1,0 +1,23 @@
+--Function to add 2 numbers
+
+create or replace function funadd(x in
+number,y in number)
+RETURN number
+is
+	ans number;
+begin
+	ans:=x + y;
+	return ans;
+end funadd;
+/
+
+--calling program
+declare
+	n1 number:=&n1;
+	n2 numbeR:=&n2;
+	s number;
+begin
+	s:=funadd(n1,n2);
+	dbms_output.put_line(s);
+end;
+/
